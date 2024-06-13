@@ -48,3 +48,13 @@ get_all(cls): Retrieves all meals from the database.
 find_by_name(cls, name): Finds a meal by its name.
 find_by_id(cls, meal_id): Finds a meal by its ID.
 chef(self): Retrieves the chef associated with the meal.
+
+Setting Up the Database: setup.py
+This script initializes and populates the database with seed data. It ensures the necessary tables are created and drops any existing tables before creating new ones.
+
+Functions
+create_table(): Creates the chefs and meals tables.
+drop_table(): Drops the chefs and meals tables.
+seed_data(): Populates the tables with initial data.
+Usage
+Run the setup.py script before running the main CLI script to ensure the database is properly set up with initial data.
