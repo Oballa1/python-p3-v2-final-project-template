@@ -16,3 +16,19 @@ add_meal(): Prompts the user to enter details of a new meal and saves it to the 
 list_meals(): Retrieves and prints all meals from the database.
 delete_chef(): Prompts the user to enter the first name and last name of a chef to be deleted and removes the chef from the database if found.
 delete_meal(): Prompts the user to enter the name of a meal to be deleted and removes the meal from the database if found.
+
+models/chef.py
+Chef Class
+__init__(self, first_name, last_name, nick_name, time_available, chef_id=None): Initializes a new chef instance.
+__repr__(self): Returns a string representation of the chef.
+create_table(cls): Creates the chefs table in the database if it doesn't exist.
+drop_table(cls): Drops the chefs table from the database.
+save(self): Inserts a new chef record into the database.
+create(cls, first_name, last_name, nick_name, time_available): Creates and saves a new chef instance.
+update(self): Updates the chef record in the database.
+delete(self): Deletes the chef record from the database.
+instance_from_db(cls, row): Creates a chef instance from a database row.
+get_all(cls): Retrieves all chefs from the database.
+find_by_name(cls, name): Finds a chef by their first or last name.
+find_by_id(cls, chef_id): Finds a chef by their ID.
+dishes(self): Retrieves all dishes associated with the chef.
