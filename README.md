@@ -32,3 +32,19 @@ get_all(cls): Retrieves all chefs from the database.
 find_by_name(cls, name): Finds a chef by their first or last name.
 find_by_id(cls, chef_id): Finds a chef by their ID.
 dishes(self): Retrieves all dishes associated with the chef.
+
+models/meal.py
+Meal Class
+__init__(self, name, preparation_time, days_prepared, chef_id, meal_id=None): Initializes a new meal instance.
+__repr__(self): Returns a string representation of the meal.
+create_table(cls): Creates the meals table in the database if it doesn't exist.
+drop_table(cls): Drops the meals table from the database.
+save(self): Inserts a new meal record into the database.
+create(cls, name, preparation_time, days_prepared, chef_id): Creates and saves a new meal instance.
+update(self): Updates the meal record in the database.
+delete(self): Deletes the meal record from the database.
+instance_from_db(cls, row): Creates a meal instance from a database row.
+get_all(cls): Retrieves all meals from the database.
+find_by_name(cls, name): Finds a meal by its name.
+find_by_id(cls, meal_id): Finds a meal by its ID.
+chef(self): Retrieves the chef associated with the meal.
