@@ -22,6 +22,14 @@ def list_chefs():
         for chef in chefs:
             print(chef)
 
+def find_chef_by_name():
+    name = input("Enter the chef's name: ")
+    chef = Chef.find_by_name(name)
+    if chef:
+        print(chef)
+    else:
+        print(f"No chef found with name {name}")
+
 def add_meal():
     name = input("Enter the meal name: ")
     preparation_time = input("Enter the preparation time: ")
@@ -42,3 +50,24 @@ def list_meals():
     else:
         for meal in meals:
             print(meal)
+
+def delete_chef():
+    first_name = input("Enter the chef's first name: ")
+    last_name = input("Enter the chef's last name: ")
+
+    chef = Chef.find_by_name(first_name)
+    if chef and chef.last_name == last_name:
+        chef.delete()
+        print(f"Deleted {chef}")
+    else:
+        print("Chef not found")
+
+def delete_meal():
+    name = input("Enter the meal name: ")
+
+    meal = Meal.find_by_name(name)
+    if meal:
+        meal.delete()
+        print(f"Deleted {meal}")
+    else:
+        print("Meal not found")
