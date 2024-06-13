@@ -1,0 +1,2 @@
+##Overview
+This project is a CLI-based system to manage chefs and meals within a culinary context. The system allows users to add, list, find, and delete chefs and meals. It also demonstrates interaction with a SQLite database to persist data. Below is a detailed description of the important files, functions, and models in the project.
